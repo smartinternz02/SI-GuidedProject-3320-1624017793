@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Job Applications</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .logo{
+    width: 200px;
+    margin-top: -16px;
+  }
+  .navbar-inverse{
+    background-color: #222;
+    border-color: #080808;
+    height: 80px;
+  }
+  .navbar-nav{
+    margin-top: 15px !important;
+  }
+  .navbar-inverse .navbar-nav>li>a{
+    color: #ffffff;
+    font-size: 16px;
+  }
+  .btn-cus{
+    background-color: #dca414;
+    margin-right: 10px;
+  }
+  .job_hiring{
+    width: 100%;
+    border-radius: 5px
+  }
+
+  .card{
+    border: 1px solid #2222223b;
+    box-shadow: 1px 1px 3px #ccc;
+  }
+  .card h4{
+    margin: 10px 10px;
+  }
+  .card p{
+    margin: 10px 10px;
+  }
+  .card a{
+    margin: 10px 10px;
+  }
+  .card img{
+
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img src="https://www.thesmartbridge.com/documents/homepage2020/img/logo.png" class="logo"></a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/">Home</a></li>
+      <li><a href="apply_job" class="btn btn-cus"><span class="glyphicon glyphicon-log-in "></span> Apply Job</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+    <h2 class="text-center">Fill the application</h2><br><br>
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+       
+        <form action="/uploader" method="post" enctype = "multipart/form-data">
+            <div class="form-group">
+              <label for="email">Name:</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Email:</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+
+            <div class="form-group">
+                <label for="pwd">Uplaod Resume:</label>
+                <input type="file" class="form-control" id="upload_file" name = "file">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+            <textarea name="message-1" class="form-control" placeholder="Predicted Rating is" rows="2">{{prediction}}</textarea><br>
+          </form>
+
+
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+</div>
+
+</body>
+</html>
