@@ -11,7 +11,7 @@ s.starttls()
 
 # Authentication 
 #s.login("prads.pradeepthi@gmail.com", "oms@1Ram") 
-s.login("rneelima29@gmail.com", "9290486224")
+s.login("rneelima29@gmail.com", "XXXXXXXXX")
 #s.login("SI2021IBM04128@smartinternz.com", "SIIBM2021To12")
 
 # give a subject   
