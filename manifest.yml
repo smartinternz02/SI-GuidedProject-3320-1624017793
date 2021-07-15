@@ -1,0 +1,7 @@
+---
+applications:
+ - name: flaskappRN
+   memory: 128M
+   disk_quota: 1G
+   random-route: true
+---
