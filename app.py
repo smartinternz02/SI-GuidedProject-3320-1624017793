@@ -2,8 +2,8 @@ from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
 import smtplib
 from pyresparser import ResumeParser
-from gevent.pywsgi import WSGIServer
-import os
+#from gevent.pywsgi import WSGIServer
+#import os
 
 # creates SMTP session
     
@@ -51,7 +51,7 @@ def upload_file():
         if(len(Skills_matched) >= 4 ):
             print("he is eligible")
             #s.login("SI2021IBM04128@smartinternz.com", "SIIBM2021To12")
-            s.login("rneelima29@gmail.com", "9290486224") 
+            s.login("rneelima29@gmail.com", "XXXXXXXX") 
             TEXT = "Hello "+name + ",\n\n"+ """Thanks for applying to the
             job post AI/ML Developer , Your skils matches our requirement.
             Kindly let us know the available time for initial round of interview. 
@@ -67,7 +67,7 @@ def upload_file():
             print("sorry we cant process your candidature")
             #s.login("SI2021IBM04128@smartinternz.com", "SIIBM2021To12")
             #s.login("prads.pradeepthi@gmail.com", "oms@1Ram")
-            s.login("rneelima29@gmail.com", "9290486224")
+            s.login("rneelima29@gmail.com", "XXXXXXXX")
             TEXT = "Hello "+name + ",\n\n"+ """Thanks for applying to the job post AI/ML 
             Developer , Your candidature is rejected. 
             \n\n\n\n Thanks and Regards, \n\n Talent acquistition Team, \n\n Smartbridge""" 
@@ -79,12 +79,12 @@ def upload_file():
                                    mailed about your candidature""")
     else:
         return render_template('index.html')
-port = os.getenv('VCAP_APP_PORT','8080')
+#port = os.getenv('VCAP_APP_PORT','8080')
 		
 if __name__ == '__main__':
-   #app.run(debug = True)
-   app.secret_key = os.urandom(12)
-   app.run(debug=True, host='0.0.0.0', port=port)
+   app.run(debug = True)
+   #app.secret_key = os.urandom(12)
+   #app.run(debug=True, host='0.0.0.0', port=port)
    
    
    
